@@ -17,7 +17,7 @@ COPY ./run.sh /scripts/run.sh
 RUN chmod 777 /scripts/run.sh
 
 RUN apt-get install -y ruby2.0
-
+RUN curl https://omnitruck.chef.io/install.sh | bash -s -- -P inspec
 WORKDIR /home/ayman
 
 EXPOSE 22
